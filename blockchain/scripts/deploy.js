@@ -1,0 +1,13 @@
+import hre from 'hardhat';
+import fs from 'node:fs';
+import path from 'node:path';
+const factory = await hre.ethers.getContractFactory('CredentialAuditRegistry');
+const contract = await factory.deploy();
+await contract.waitForDeployment();
+const address = await contract.getAddress();
+const network = await hre.ethers.provider.getNetwork();
+const chainId = Number(network.chainId);
+console.log(`CredentialAuditRegistry deployed to: ${address}`);
+const out = path.resolve(`../deployment.${hre.network.name}.json`);
+fs.writeFileSync(out, JSON.stringify({ address, chainId, network: hre.network.name, deployedAt: new Date().toISOString() }, null, 2));
+console.log(`Deployment metadata written to ${out}`);
