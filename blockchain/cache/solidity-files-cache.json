@@ -1,0 +1,41 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "C:\\Users\\assus\\Downloads\\blockchain-password-security\\blockchain-password-security\\blockchain\\contracts\\CredentialAuditRegistry.sol": {
+      "lastModificationDate": 1794472252103,
+      "contentHash": "5124cb84926423b49c84ff2d609a4a48",
+      "sourceName": "contracts/CredentialAuditRegistry.sol",
+      "solcConfig": {
+        "version": "0.8.24",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.24"
+      ],
+      "artifacts": [
+        "CredentialAuditRegistry"
+      ]
+    }
+  }
+}
